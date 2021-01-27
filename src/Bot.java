@@ -51,7 +51,7 @@ public class Bot extends Entity {
         double nextPosY = player.y + ySpeed;
         double nextPosAngle = 0; // Unit : degree.
         
-        double extraAngle = Math.toDegrees(Math.atan((nextPosY - y)/(nextPosX = x))) // Unit : degree.
+        double extraAngle = Math.toDegrees(Math.atan((nextPosY - y)/(nextPosX = x))) // Unit : degrees.
         if(nextPosX > x){
            if(nextPosY > y){
               nextPosAngle = extraAngle;
@@ -65,7 +65,7 @@ public class Bot extends Entity {
     }  
 
     private double getPlayerAngle(){
-       double playerAngle = 0;
+       double playerAngle = 0; // Unit : degrees.
        double extraAngle = Math.toDegrees(Math.atan((player.y - y)/(player.x - x)));
        if(player.x > x){
          if(player.y > y){
