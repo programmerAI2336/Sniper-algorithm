@@ -64,6 +64,21 @@ public class Bot extends Entity {
        return nextPosAngle;
     }  
 
+    private double getPlayerAngle(){
+       double playerAngle = 0;
+       double extraAngle = Math.toDegrees(Math.atan((player.y - y)/(player.x - x)));
+       if(player.x > x){
+         if(player.y > y){
+            playerAngle = extraAngle;
+         } else {
+            playerAngle = extraAngle + 360;
+         }
+       } else {
+          playerAngle = extraAngle + 180; 
+       }
+       return playerAngle;
+    }
+    
     public void aim() {
          
     }
